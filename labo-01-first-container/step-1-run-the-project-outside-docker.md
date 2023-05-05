@@ -14,10 +14,12 @@ git clone https://github.com/spring-projects/spring-petclinic.git
 
 <!---->
 
-* [ ] What type of application is it ?
+* [ ] What type of application is it ? 
+`Heavy application`
 * [ ] Which database engine is used ?
+`mysql`
 * [ ] Do we need to install the package manager _MAVEN_ before building the project ?
-
+`yes if we want to auto build the project`
 <!---->
 
 * Inspect the dependencies (pom.xml)
@@ -34,35 +36,41 @@ git clone https://github.com/spring-projects/spring-petclinic.git
 
 ```
 [INPUT]
-//TODO
+where java
 
 [OUTPUT]
-//TODO
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe
 ```
 
 * [ ] Which current compiler is installed (JDK) ?
 
 ```
 [INPUT]
-//TODO
+java -version
 
 [OUTPUT]
-//TODO
+java version "1.8.0_281"
+Java(TM) SE Runtime Environment (build 1.8.0_281-b09)
+Java HotSpot(TM) 64-Bit Server VM (build 25.281-b09, mixed mode)
 ```
 
 * [ ] Which current runtime is installed (JRE) ?
 
 ```
 [INPUT]
-//TODO
+java -version
 
 [OUTPUT]
-//TODO
+java version "1.8.0_281"
+Java(TM) SE Runtime Environment (build 1.8.0_281-b09)
+Java HotSpot(TM) 64-Bit Server VM (build 25.281-b09, mixed mode)
 ```
 
 * [ ] Do we need to install the java virtual machine (JVM) ?
 
+
 ```
+No its not required
 ```
 
 ### Install the Open JDK
@@ -77,7 +85,7 @@ git clone https://github.com/spring-projects/spring-petclinic.git
 ```
 [INPUT]
 //TODO
-
+curl https://download.java.net/java/GA/jdk20.0.1/b4887098932d415489976708ad6d1a4b/9/GPL/openjdk-20.0.1_windows-x64_bin.zip --output
 [OUTPUT]
 //TODO
 ```
@@ -130,7 +138,8 @@ git clone https://github.com/spring-projects/spring-petclinic.git
 
 ```
 [INPUT]
-//TODO
+> set JAVA_HOME=C:\tools\JDK\jdk-20.0.1
+
 
 [OUTPUT]
 //TODO
