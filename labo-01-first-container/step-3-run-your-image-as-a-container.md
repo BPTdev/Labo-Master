@@ -29,10 +29,11 @@ curl --request GET ^
 
 ```
 [INPUT]
-//TODO
+docker ps
 
 [OUTPUT]
-//TODO
+CONTAINER ID   IMAGE                              COMMAND                  CREATED         STATUS         PORTS     NAMES
+cfab789d305d   eclipse-petclinic:version1.0.dev   "./mvnw spring-boot:…"   2 minutes ago   Up 2 minutes             compassionate_mccarthy
 
 ```
 
@@ -40,10 +41,10 @@ curl --request GET ^
 
 ```
 [INPUT]
-//TODO
+docker stop <CONTAINER ID>
 
 [OUTPUT]
-//TODO
+Stop the container
 ```
 
 * [ ] Rename your docker as "petclinic-app"
@@ -54,20 +55,22 @@ curl --request GET ^
 
 ```
 [INPUT]
-//TODO
+docker tag eclipse-petclinic:version1.0.dev petclinic-app:version1.0.dev
 
 [OUTPUT]
-//TODO
+docker image
+REPOSITORY          TAG              IMAGE ID       CREATED          SIZE
+petclinic-app       version1.0.dev   7df82d1f61e2   22 minutes ago   607MB
 ```
 
 * [ ] Restart your docker using the new name
 
 ```
 [INPUT]
-//TODO
+docker restart petclinic-app
 
 [OUTPUT]
-//TODO
+the docker is restarting
 ```
 
 * [ ] Display all running dockers with this output format
@@ -85,9 +88,11 @@ eclipse-petclinic:version1.0.dev   0.0.0.0:80->8080/tcp.   petclinic-server
 
 ```
 [INPUT]
-//TODO
+docker ps --format "table {{.Image}}\t{{.Ports}}\t{{.Names}}"
+
 
 [OUTPUT]
-//TODO
+IMAGE                          PORTS     NAMES
+petclinic-app:version1.0.dev             petclinic_app_dev
 ```
 

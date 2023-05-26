@@ -169,10 +169,11 @@ eclipse-temurin   17-jdk-jammy   56c7bc12ee6d   3 days ago       456MB
 
 ```
 [INPUT]
-//TODO
+docker images
 
 [OUTPUT]
-//TODO
+REPOSITORY   TAG       IMAGE ID       CREATED      SIZE
+vir          v0.1      8d334c2691a4   3 days ago   607MB
 ```
 
 ## Using tags
@@ -201,7 +202,7 @@ eclipse-temurin   17-jdk-jammy   56c7bc12ee6d   9 days ago    456MB
 
 ```
 //TODO
-Explain
+Yes, we can see wich machine support wich environement
 ```
 
 * [ ] Using the appropriate command, update your local images and tags like this:
@@ -218,9 +219,14 @@ eclipse-temurin     17-jdk-jammy     56c7bc12ee6d   10 days ago    456MB
 
 ```
 [INPUT]
-//TODO
+docker tag petclinic:dev eclipse-petclinic:version1.0.dev
 
 [OUTPUT]
-//TODO
+docker image
+REPOSITORY          TAG              IMAGE ID       CREATED         SIZE
+eclipse-petclinic   version1.0.dev   7df82d1f61e2   7 minutes ago   607MB
+petclinic           dev              7df82d1f61e2   7 minutes ago   607MB
+petclinic           int              7df82d1f61e2   7 minutes ago   607MB
+petclinic           prod             7df82d1f61e2   7 minutes ago   607MB
 ```
 
