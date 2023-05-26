@@ -4,15 +4,15 @@
 
 ## Create your docker file
 
-* [ ] Change the directory to the app directory (we will use the same project [as for the previous step](step-1-run-the-project-outside-docker.md)).
-* [ ] Create an empty file named "Dockerfile"
+* [x] Change the directory to the app directory (we will use the same project [as for the previous step](step-1-run-the-project-outside-docker.md)).
+* [x] Create an empty file named "Dockerfile"
 
 ```
 [INPUT]
-//TODO
+touch Dockerfile
 
 [OUTPUT]
-//TODO
+Dockerfile was created
 ```
 
 * Using your IDE, add the following contents to the Dockerfile:
@@ -30,13 +30,13 @@ FROM eclipse-temurin:17-jdk-jammy
 * [Official documentation - Synthax directive](https://docs.docker.com/build/dockerfile/frontend/)
 
 ```
-//TODO
+Telling Docker wich version of the synthax will be used
 ```
 
 * [ ] Is the docker image suitable for a production environment?
 
 ```
-//TODO
+Yes
 ```
 
 ### Dependencies resolution and first app build
@@ -63,19 +63,20 @@ RUN ./mvnw dependency:resolve
 * [ ] How is it possible to resolve the dependencies when the source code is not available at this point in the process?
 
 ```
-//TODO
+Maven uses the coordinates values for a given dependency to construct a URL according to the maven repository layout
 ```
 
 * Add the command able to provide (copy) your source code to the image.
 
 ```
-//TODO
+COPY .mvn/ .mvn
+COPY mvnw pom.xml ./
 ```
 
 * Add the command responsible to run your application inside the Docker.
 
 ```
-//TODO
+CMD ["./mvnw", "spring-boot:run"]
 ```
 
 ## Create a .dockerignore file
@@ -87,7 +88,13 @@ To meet the good practice provided by Docker, we have to reduce the amount of da
 {% endhint %}
 
 * [ ] Create a .dockerignore file in the same directory as the Dockerfile.
+```
+touch .dockerignore
+```
 * [ ] Add the folder containing the MAVEN output.
+```
+echo "target" >> .dockerignore
+```
 
 ## Build an image
 
@@ -100,7 +107,7 @@ This [doc may also help you with tag samples](https://docs.docker.com/engine/ref
 * [ ] Find the best tag for your image (this image is not intended for publication.)
 
 ```
-//TODO
+dev
 ```
 
 * [ ] Build your first Docker image
