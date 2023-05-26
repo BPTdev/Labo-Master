@@ -10,87 +10,77 @@
 git clone https://github.com/spring-projects/spring-petclinic.git
 ```
 
-* Read carefully the readme file
+* Read the readme file carefully
 
 <!---->
 
-* [ ] What type of application is it ? 
-`Heavy application`
-* [ ] Which database engine is used ?
-`mysql`
-* [ ] Do we need to install the package manager _MAVEN_ before building the project ?
-`yes if we want to auto build the project`
+* [ ] What type of application is it?
+* [ ] Which database engine is used?
+* [ ] Do we need to install the package manager _MAVEN_ before building the project?
+
 <!---->
 
 * Inspect the dependencies (pom.xml)
 
 <!---->
 
-* [ ] Which version of Java should compatible with the code provided ?
+* [ ] Which version of Java should be compatible with the code provided?
 
 ## Setup Java components
 
-### Check your current java installation
+### Check your current Java installation
 
-* [ ] Where is java installed ?
-
-```
-[INPUT]
-where java
-
-[OUTPUT]
-C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe
-```
-
-* [ ] Which current compiler is installed (JDK) ?
+* [ ] Where is Java installed?
 
 ```
 [INPUT]
-java -version
+//TODO
 
 [OUTPUT]
-java version "1.8.0_281"
-Java(TM) SE Runtime Environment (build 1.8.0_281-b09)
-Java HotSpot(TM) 64-Bit Server VM (build 25.281-b09, mixed mode)
+//TODO
 ```
 
-* [ ] Which current runtime is installed (JRE) ?
+* [ ] Which current compiler is installed (JDK)?
+
+<pre><code><strong>[INPUT]
+</strong>//TODO
+
+[OUTPUT]
+//TODO
+</code></pre>
+
+* [ ] Which current runtime is installed (JRE)?
 
 ```
 [INPUT]
-java -version
+//TODO
 
 [OUTPUT]
-java version "1.8.0_281"
-Java(TM) SE Runtime Environment (build 1.8.0_281-b09)
-Java HotSpot(TM) 64-Bit Server VM (build 25.281-b09, mixed mode)
+//TODO
 ```
 
-* [ ] Do we need to install the java virtual machine (JVM) ?
-
+* [ ] Do we need to install the Java virtual machine (JVM)?
 
 ```
-No its not required
+//TODO
 ```
 
 ### Install the Open JDK
 
-* [Oracle Download Web Site](https://jdk.java.net/20/)
+* [Oracle Download WebSite](https://jdk.java.net/20/)
 
 {% hint style="info" %}
 * Accept the end user license before trying, then
-* Then get the target url (cookies.
+* Then get the target URL (cookies).
 {% endhint %}
 
-```
+```powershell
 [INPUT]
 //TODO
-curl https://download.java.net/java/GA/jdk20.0.1/b4887098932d415489976708ad6d1a4b/9/GPL/openjdk-20.0.1_windows-x64_bin.zip --output
+
 [OUTPUT]
 //TODO
 ```
-
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Powershell output during sdk download process</p></figcaption></figure>
 
 #### Check the archive integrity before installing the JDK
 
@@ -98,7 +88,7 @@ curl https://download.java.net/java/GA/jdk20.0.1/b4887098932d415489976708ad6d1a4
 * Generate your local hash based on the archive downloaded ([help](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash?view=powershell-7.3))
 * Compare both hashes...
 
-```
+```powershell
 [INPUT]
 //TODO
 
@@ -116,9 +106,7 @@ curl https://download.java.net/java/GA/jdk20.0.1/b4887098932d415489976708ad6d1a4
 //TODO
 ```
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>Powershell output during unzip process</p></figcaption></figure>
-
-#### Move the unzip folder to Progams Folder
+#### Move the unzip folder to Programs Folder
 
 ```
 [INPUT]
@@ -138,8 +126,7 @@ curl https://download.java.net/java/GA/jdk20.0.1/b4887098932d415489976708ad6d1a4
 
 ```
 [INPUT]
-> set JAVA_HOME=C:\tools\JDK\jdk-20.0.1
-
+//TODO
 
 [OUTPUT]
 //TODO
@@ -148,7 +135,7 @@ curl https://download.java.net/java/GA/jdk20.0.1/b4887098932d415489976708ad6d1a4
 * [ ] Update PATH environment variable
 
 {% hint style="info" %}
-Backup your current path before updating it.
+Back up your current path before updating it.
 
 echo %PATH% > path.back
 {% endhint %}
@@ -159,9 +146,10 @@ echo %PATH% > path.back
 
 [OUTPUT]
 //TODO
+
 ```
 
-* [ ] Check the variables settings
+* [ ] Check the variables
 
 ```
 [INPUT]
@@ -169,6 +157,7 @@ echo %PATH% > path.back
 
 [OUTPUT]
 //TODO
+
 ```
 
 ## Build and test the project
@@ -181,13 +170,8 @@ echo %PATH% > path.back
 //TODO
 ```
 
-
 ### Result expected 
 
-```
-[INPUT]
-//TODO
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
-[OUTPUT]
-//TODO
-```
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
