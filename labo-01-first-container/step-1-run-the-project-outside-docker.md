@@ -34,10 +34,10 @@ git clone https://github.com/spring-projects/spring-petclinic.git
 
 ```
 [INPUT]
-//TODO
+where java
 
 [OUTPUT]
-//TODO
+no result shown
 ```
 
 * [ ] Which current compiler is installed (JDK)?
@@ -53,16 +53,18 @@ git clone https://github.com/spring-projects/spring-petclinic.git
 
 ```
 [INPUT]
-//TODO
+java -version
 
 [OUTPUT]
-//TODO
+java version "1.8.0_281"
+Java(TM) SE Runtime Environment (build 1.8.0_281-b09)
+Java HotSpot(TM) 64-Bit Server VM (build 25.281-b09, mixed mode)
 ```
 
 * [ ] Do we need to install the Java virtual machine (JVM)?
 
 ```
-//TODO
+No
 ```
 
 ### Install the Open JDK
@@ -76,10 +78,12 @@ git clone https://github.com/spring-projects/spring-petclinic.git
 
 ```powershell
 [INPUT]
-//TODO
+curl -O https://download.java.net/java/GA/jdk20.0.1/b4887098932d415489976708ad6d1a4b/9/GPL/openjdk-20.0.1_windows-x64_bin.zip
+
+
 
 [OUTPUT]
-//TODO
+java is installed
 ```
 
 #### Check the archive integrity before installing the JDK
@@ -90,7 +94,8 @@ git clone https://github.com/spring-projects/spring-petclinic.git
 
 ```powershell
 [INPUT]
-//TODO
+certutil -hashfile ~/Download openjdk-20.0.1_windows-x64_bin.zip https://download.java.net/java/GA/jdk20.0.1/b4887098932d415489976708ad6d1a4b/9/GPL/openjdk-20.0.1_windows-x64_bin.zip.sha256
+
 
 [OUTPUT]
 //TODO
@@ -100,7 +105,7 @@ git clone https://github.com/spring-projects/spring-petclinic.git
 
 ```
 [INPUT]
-//TODO
+expand -r ~/Download/openjdk-20.0.1_windows-x64_bin.zip ~/Download/openjdk-20.0.1_windows-x64_bin
 
 [OUTPUT]
 //TODO
@@ -110,7 +115,7 @@ git clone https://github.com/spring-projects/spring-petclinic.git
 
 ```
 [INPUT]
-//TODO
+move ~/Download/openjdk-20.0.1_windows-x64_bin "C:\Program Files"
 
 [OUTPUT]
 //TODO
@@ -126,7 +131,7 @@ git clone https://github.com/spring-projects/spring-petclinic.git
 
 ```
 [INPUT]
-//TODO
+setx JAVA_HOME "C:\Program Files\openjdk-20.0.1_windows-x64_bin"
 
 [OUTPUT]
 //TODO
@@ -142,7 +147,9 @@ echo %PATH% > path.back
 
 ```
 [INPUT]
-//TODO
+setx PATH_BACKUP "%PATH%"
+setx PATH "%PATH%;%JAVA_HOME%\bin"
+
 
 [OUTPUT]
 //TODO
@@ -153,10 +160,11 @@ echo %PATH% > path.back
 
 ```
 [INPUT]
-//TODO
+echo %PATH%
+
 
 [OUTPUT]
-//TODO
+[The PATH content]
 
 ```
 
@@ -164,7 +172,7 @@ echo %PATH% > path.back
 
 ```
 [INPUT]
-//TODO
+I don't found it
 
 [OUTPUT]
 //TODO
