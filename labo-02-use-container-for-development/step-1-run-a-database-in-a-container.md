@@ -134,7 +134,7 @@ CMD ["./mvnw", "spring-boot:run", "-Dspring-boot.run.profiles=mysql"]
 * [ ] If you run both docker, the application server will not able to talk with the dbserver... any idea why ?
 
 ```
-the ports are not opens
+the ports are not set correctly in the code of the petclinic
 ```
 
 * [ ] Let's build our image
