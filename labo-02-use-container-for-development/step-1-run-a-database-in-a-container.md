@@ -19,24 +19,24 @@ Let's create both volumes, one for the data, and another one for the db config.
 docker volume create mysql_data
 
 [OUTPUT]
-//TODO
+mysql_data
 ```
 
 * [ ] Create a second volume for the MySQL configuration (tag name : mysql_config)
 
 ```
 [INPUT]
-//TODO create mysql_config
+docker volume create mysql_config
 
 [OUTPUT]
-//TODO
+mysql_config
 ```
 
 * [ ] List the volumes
 
 ```
 [INPUT]
-//TOOD  
+docker volume list
 
 [OUTPUT]
 //Expected result
@@ -53,17 +53,17 @@ Let's create a user-defined bridge network enabling our application and our data
 
 ```
 [INPUT]
-//TODO create mysqlnet
+docker network create mysqlnet
 
 [OUTPUT]
-//TODO
+8f695ceef1d9ade20b069a6e1e7ea8ec9ed5b6d36822919bd6e77ecd22ad8914
 ```
 
 * [ ] List the networks
 
 ```
 [INPUT]
-//TODO list docker network
+docker network list
 
 [OUTPUT]
 //TODO Expected result
@@ -88,7 +88,7 @@ Check your host ports and do no try to forward one of them that is already is us
 
 ```
 [INPUT]
-//TODO Run docker
+docker run mysql
 
 [OUTPUT]
 Unable to find image 'mysql:8.0' locally
@@ -112,10 +112,10 @@ a11a06843fd5: Waiting
 
 ```
 [INPUT]
-//TODO
+docker ps
 
 [OUTPUT]
-//TODO Result expected
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 IMAGE                              PORTS.                               NAMES
 mysql:8.0                          33060/tcp, 0.0.0.0:3316->3306/tcp.   mysqlserver
 eclipse-petclinic:version1.0.dev   0.0.0.0:80->8080/tcp.                petclinic-server
@@ -134,7 +134,7 @@ CMD ["./mvnw", "spring-boot:run", "-Dspring-boot.run.profiles=mysql"]
 * [ ] If you run both docker, the application server will not able to talk with the dbserver... any idea why ?
 
 ```
-//TODO
+the ports are not opens
 ```
 
 * [ ] Let's build our image
@@ -158,13 +158,11 @@ mysql               8.0              8189e588b0e8   4 weeks ago     564MB
 ```
 [INPUT]
 //TODO Start your docker
-
-
+docker run "tag"
+result with build success 
 [INPUT]
 //Call the vets route
-curl --request GET ^
-    --url http://localhost/vets ^
-    --header 'content-type: application/json'
+curl --request GET ^ --url http://localhost/vets ^ --header 'content-type: application/json'
 
 [OUTPUT]
 //Result Expected
